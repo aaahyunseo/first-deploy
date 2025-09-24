@@ -35,7 +35,7 @@ export default function ResumePage() {
                 >
                 🔗 GitHub Link
                 </a>
-                &nbsp;
+                &nbsp;&nbsp;
                 <a
                 href={generalInfo.blog_url}
                 target="_blank"
@@ -61,11 +61,19 @@ export default function ResumePage() {
               {portfolio.project_introduction}
             </p>
             <a
-              href={portfolio.project_github_url}
+              href={portfolio.project_be_github_url}
               target="_blank"
               className="inline-block px-4 py-2 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition"
             >
-              📂 GitHub Repository
+              📂 GitHub BE Repository
+            </a>
+            &nbsp;&nbsp;
+            <a
+              href={portfolio.project_fe_github_url}
+              target="_blank"
+              className="inline-block px-4 py-2 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition"
+            >
+              📂 GitHub FE Repository
             </a>
           </div>
         </section>

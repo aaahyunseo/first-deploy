@@ -1,5 +1,6 @@
 {
     "project_name" : "LG CNS AM Inspire Camp 3th Blog",
     "project_introduction" : "3기의 효율적인 지식 공유와 협업을 위한 최고의 학습 파트너",
-    "project_github_url" : "https://github.com/aaahyunseo/inspire3-team6-pj1"
+    "project_be_github_url" : "https://github.com/aaahyunseo/inspire3-team6-pj1",
+    "project_fe_github_url" : "https://github.com/StarChoiMarine/CNStudy-FE"
 }

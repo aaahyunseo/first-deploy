@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,7 +12,6 @@ export default function Home() {
           width={180}
           height={38}
           priority
-          
         />
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
@@ -25,9 +25,18 @@ export default function Home() {
             부트캠프 열심히 참여하겠습니다.
           </li>
         </ol>
+
+        {/* Resume 버튼 */}
+        <Link
+          href="/resume"
+          className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
+        >
+          Resume 확인하기
+        </Link>
       </main>
+
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-          LG CNS AM Inspire Camp 3th
+        LG CNS AM Inspire Camp 3th
       </footer>
     </div>
   );

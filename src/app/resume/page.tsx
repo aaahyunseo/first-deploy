@@ -1,8 +1,29 @@
 import Link from "next/link";
-import generalInfo from "@/service/resume_general_info_service.json";
-import portfolio from "@/service/resume_portfolio_service.json";
 
-export default function ResumePage() {
+async function getGeneralInfo() {
+  const res = await fetch(
+    "https://raw.githubusercontent.com/aaahyunseo/first-deploy/refs/heads/0.3/general_info/src/service/resume_general_info_service.json",
+    { cache: "no-store" }
+  );
+
+  if (!res.ok) throw new Error("Failed to fetch general info");
+  return res.json();
+}
+
+async function getPortfolio() {
+  const res = await fetch(
+    "https://raw.githubusercontent.com/aaahyunseo/first-deploy/refs/heads/0.3/general_info/src/service/resume_portfolio_service.json",
+    { cache: "no-store" }
+  );
+
+  if (!res.ok) throw new Error("Failed to fetch portfolio info");
+  return res.json();
+}
+
+export default async function ResumePage() {
+  const generalInfo = await getGeneralInfo();
+  const portfolio = await getPortfolio();
+
   return (
     <main className="font-sans min-h-screen p-10 bg-gradient-to-b from-gray-100 to-gray-200">
       <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-10">
@@ -29,19 +50,19 @@ export default function ResumePage() {
               </li>
               <li>
                 <a
-                href={generalInfo.git_url}
-                target="_blank"
-                className="inline-block px-4 py-2 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition"
+                  href={generalInfo.git_url}
+                  target="_blank"
+                  className="inline-block px-4 py-2 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition"
                 >
-                🔗 GitHub Link
+                  🔗 GitHub Link
                 </a>
                 &nbsp;&nbsp;
                 <a
-                href={generalInfo.blog_url}
-                target="_blank"
-                className="inline-block px-4 py-2 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition"
+                  href={generalInfo.blog_url}
+                  target="_blank"
+                  className="inline-block px-4 py-2 bg-black text-white text-sm rounded-lg hover:bg-gray-800 transition"
                 >
-                🔗 Tistory Link
+                  🔗 Tistory Link
                 </a>
               </li>
             </ul>

@@ -1,17 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-center">
         <Image
-          className="dark:invert"
+          className="dark:invert rounded-full object-cover"
           src="/IMG_7876.jpg"
-          alt="Next.js logo"
+          alt="Profile Image"
           width={180}
-          height={38}
+          height={180}
           priority
-          
         />
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
@@ -25,9 +25,18 @@ export default function Home() {
             부트캠프 열심히 참여하겠습니다.
           </li>
         </ol>
+
+        {/* Resume 버튼 */}
+        <Link
+          href="/resume"
+          className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
+        >
+          Resume 확인하기
+        </Link>
       </main>
+
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-          LG CNS AM Inspire Camp 3th
+        LG CNS AM Inspire Camp 3th
       </footer>
     </div>
   );

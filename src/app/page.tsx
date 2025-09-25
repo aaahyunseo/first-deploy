@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+type Project = {
+  project_name: string;
+  project_introduction: string;
+  project_github: string;
+};
+
 async function getGeneralInfo() {
   const res = await fetch(
     "https://raw.githubusercontent.com/aaahyunseo/first-deploy/refs/heads/0.3/resume-improvement/src/service/resume_general_info_service.json",
@@ -10,12 +16,11 @@ async function getGeneralInfo() {
   return res.json();
 }
 
-async function getPortfolio() {
+async function getPortfolio(): Promise<Project[]> {
   const res = await fetch(
     "https://raw.githubusercontent.com/aaahyunseo/first-deploy/refs/heads/0.3/resume-improvement/src/service/resume_portfolio_service.json",
     { cache: "no-store" }
   );
-
   if (!res.ok) throw new Error("Failed to fetch portfolio info");
   return res.json();
 }
@@ -85,14 +90,12 @@ export default async function Home() {
           <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">💼 Portfolio</h2>
 
           <div className="space-y-6">
-            {portfolio.map((project: any, idx: number) => (
+            {portfolio.map((project, idx) => (
               <div
                 key={idx}
                 className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {project.project_name}
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.project_name}</h3>
                 <p className="text-gray-700 mb-4">{project.project_introduction}</p>
                 <a
                   href={project.project_github}

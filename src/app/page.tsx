@@ -3,6 +3,7 @@ import Image from "next/image";
 type Project = {
   project_name: string;
   project_introduction: string;
+  project_period: string;
   project_github: string;
 };
 

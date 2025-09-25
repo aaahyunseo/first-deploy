@@ -2,11 +2,19 @@
     {
         "project_name" : "LG CNS AM Inspire Camp 3th Blog",
         "project_introduction" : "3기의 효율적인 지식 공유와 협업을 위한 최고의 학습 파트너",
+        "project_period" : "2025.09.15-2025.09.19",
         "project_github" : "https://github.com/aaahyunseo/inspire3-team6-pj1"
     },
     {
         "project_name" : "부먹찍먹",
-        "project_introduction" : "먹고, 찍고, 즐기는 부산여행! 부먹찍먹",
+        "project_introduction" : "먹고, 찍고, 즐기는 부산여행!",
+        "project_period" : "2025.08.19-2025.09.19",
         "project_github" : "https://github.com/aaahyunseo/bumeok-jjimeok"
+    },
+    {
+        "project_name" : "시장에 가면",
+        "project_introduction" : "내 주변 AI 전통시장 탐방 앱",
+        "project_period" : "2025.06.02-2025.07.18",
+        "project_github" : "https://github.com/aaahyunseo/go-market"
     }
 ]

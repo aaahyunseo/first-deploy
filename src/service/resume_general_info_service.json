@@ -1,6 +1,8 @@
 {
-    "name" : "최현서",
-    "git_url" : "https://github.com/aaahyunseo",
-    "blog_url" : "https://aaahyunseo.tistory.com/",
-    "introduction" : "안녕하세요. LG CNS AM Inspire Camp 3기 최현서입니다."
+    "name" : "최현서(ChoiHyunSeo)",
+    "email" : "seogun68@gmail.com",
+    "github" : "https://github.com/aaahyunseo",
+    "blog" : "https://aaahyunseo.tistory.com/",
+    "introduction" : "끊임없이 소통하고, 성장하는 개발자 최현서 입니다 :)",
+    "major" : "정보통신공학과 / 인공지능·ICT융합 연계전공"
 }
